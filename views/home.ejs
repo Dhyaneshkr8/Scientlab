@@ -1,0 +1,41 @@
+<%- include("partials/header"); -%>
+<br>
+<center>
+<h1>Home</h1>
+<p style="line-height:2;" > <%= startingContent %> </p>
+
+<section id="pricing">
+  <h1>Projects</h1> <br>
+  <div class="row">
+    <%  projects.forEach(function(project){ %>
+    <div class="pricing-column col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h2 style="text-transform: uppercase;" ><%=project.projectName%></h2>
+        </div>
+        <div class="card-body">
+          <p>
+            <%=project.projectDescrip%>
+          </p>
+          <a href="/project/<%=project._id%>"><button class="btn btn-lg btn-block btn-outline-dark" type="button">Read more</button></a>
+        </div>
+      </div>
+    </div>
+     <% }) %>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer"); -%>
